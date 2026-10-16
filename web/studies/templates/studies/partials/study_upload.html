@@ -1,0 +1,190 @@
+<!-- Загрузка исследования -->
+
+<div>
+
+    <label
+        for="studyFolder"
+        class="btn btn-blue"
+    >
+        Загрузить исследование
+    </label>
+
+    <button 
+        type = "button"
+        class = "btn btn-blue"
+        id = "loadStudyButton"
+    >   
+        Выбрать исследование
+    </button>
+    <input
+        type="file"
+        id="studyFolder"
+        name="studyFolder"
+        webkitdirectory
+        directory
+        multiple
+        hidden
+    >
+
+
+    <div
+        class="file-info"
+        id="fileInfo"
+    >
+        Исследование не выбрано
+    </div>
+
+
+    <!-- Результат анонимизации -->
+
+    <div
+        class="anonymization-info"
+        id="anonymizationInfo"
+        style="display: none;"
+    >
+
+        <div class="anonymization-title">
+            Результат анонимизации
+        </div>
+
+
+        <div class="anonymization-group">
+
+            <div class="anonymization-group-title">
+                Измененные поля
+            </div>
+
+            <div id="changedFields"></div>
+
+        </div>
+
+
+        <div class="anonymization-group">
+
+            <div class="anonymization-group-title">
+                Удаленные поля
+            </div>
+
+            <div id="removedFields"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Информация об исследовании -->
+
+    <div
+        class="study-info"
+        id="studyInfo"
+        style="display: none;"
+    >
+
+        <div class="study-info-row">
+
+            <span>
+                ID исследования
+            </span>
+
+            <strong id="studyId">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="study-info-row">
+
+            <span>
+                Пациент
+            </span>
+
+            <strong id="patientName">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="study-info-row">
+
+            <span>
+                Номер исследования
+            </span>
+
+            <strong id="accessionNumber">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="study-info-row">
+
+            <span>
+                Количество файлов
+            </span>
+
+            <strong id="studyFileCount">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="study-info-row">
+
+            <span>
+                Статус
+            </span>
+
+            <strong id="studyStatus">
+                —
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Окно выбора исследования -->
+
+<div
+    class="modal fade"
+    id="studyListModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Ранее загруженные исследования
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div id="studyList">
+                    Загрузка...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

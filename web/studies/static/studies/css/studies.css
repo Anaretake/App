@@ -1,0 +1,291 @@
+body {
+    background-color: #f7fbff;
+    font-family: Arial, sans-serif;
+    color: #243746;
+}
+
+
+/* Верхняя панель */
+
+.top-panel {
+    background-color: #e8f4ff;
+    border-bottom: 1px solid #c9e3f7;
+    padding: 18px 30px;
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #246b9e;
+    margin: 0;
+}
+
+
+/* Основной контейнер */
+
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* Заголовки */
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #246b9e;
+    margin-bottom: 20px;
+}
+
+
+/* Блок обработки */
+
+.processing-section {
+    background-color: white;
+    border: 1px solid #d8eaf7;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+
+/* Кнопки */
+
+.btn-blue {
+    background-color: #4da3d9;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+}
+
+.btn-blue:hover {
+    background-color: #368fc7;
+    color: white;
+}
+
+.btn-blue:disabled {
+    background-color: #b9d8eb;
+    color: white;
+    cursor: not-allowed;
+}
+
+
+/* Информация о файлах */
+
+.file-info {
+    margin-top: 15px;
+    color: #6c7a86;
+    font-size: 14px;
+}
+
+
+/* Информация об анонимизации */
+
+.anonymization-info {
+    margin-top: 20px;
+    padding: 15px 18px;
+    background-color: #f7fbff;
+    border: 1px solid #d8eaf7;
+    border-radius: 6px;
+}
+
+.anonymization-title {
+    color: #246b9e;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.anonymization-group {
+    margin-bottom: 15px;
+}
+
+.anonymization-group:last-child {
+    margin-bottom: 0;
+}
+
+.anonymization-group-title {
+    color: #6c7a86;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.anonymization-item {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #243746;
+}
+
+
+/* Информация об исследовании */
+
+.study-info {
+    margin-top: 20px;
+    padding: 15px 18px;
+    background-color: #f7fbff;
+    border: 1px solid #d8eaf7;
+    border-radius: 6px;
+}
+
+.study-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 7px 0;
+    border-bottom: 1px solid #e1edf5;
+    font-size: 14px;
+}
+
+.study-info-row:last-child {
+    border-bottom: none;
+}
+
+.study-info-row span {
+    color: #6c7a86;
+}
+
+.study-info-row strong {
+    color: #243746;
+    text-align: right;
+}
+
+
+/* Разделитель */
+
+.step-divider {
+    border: none;
+    border-top: 1px solid #e1edf5;
+    margin: 25px 0;
+}
+
+
+/* Этап обработки */
+
+.processing-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* Статус */
+
+.status {
+    margin-top: 15px;
+    color: #6c7a86;
+    font-size: 14px;
+}
+
+.status-ready {
+    color: #3985ad;
+}
+
+
+/* Результат */
+
+.result-section {
+    margin-top: 40px;
+}
+
+.result-area {
+    min-height: 400px;
+    background-color: white;
+    border: 1px solid #d8eaf7;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9aaab5;
+    text-align: center;
+
+    padding: 20px;
+    overflow: hidden;
+}
+
+.result-text {
+    font-size: 15px;
+}
+
+
+/* Топограмма */
+
+#topogramImage {
+    display: none;
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+}
+
+
+/* Адаптация */
+
+@media (max-width: 768px) {
+
+    .top-panel {
+        padding: 15px 20px;
+    }
+
+    .main-container {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .processing-section {
+        padding: 20px;
+    }
+
+    .processing-step {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .processing-step .btn {
+        width: 100%;
+    }
+
+    .study-info-row {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .study-info-row strong {
+        text-align: left;
+    }
+}
+.study-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 16px;
+    margin-bottom: 12px;
+
+    background-color: #f8fbff;
+
+    border: 1px solid #d9e8f5;
+    border-radius: 10px;
+}
+
+
+.study-list-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.study-list-item strong {
+    color: #245a8d;
+}
+
+
+.study-list-item div div {
+    margin-top: 4px;
+    color: #5f6f7f;
+    font-size: 14px;
+}

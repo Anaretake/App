@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Обработка КТ</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Основные стили -->
+    <link
+        rel="stylesheet"
+        href="{% static 'studies/css/studies.css' %}"
+    >
+
+</head>
+
+<body>
+
+    {% csrf_token %}
+
+    <!-- Верхняя панель -->
+
+    {% include "studies/partials/header.html" %}
+
+    <!-- Основное содержимое -->
+
+    <main class="main-container">
+
+        <!-- Обработка исследования -->
+
+        <section>
+
+            <h2 class="section-title">
+                Обработка исследования
+            </h2>
+
+            <!-- Одна общая белая панель -->
+
+            <div class="processing-section">
+
+                {% include "studies/partials/study_upload.html" %}
+
+                {% include "studies/partials/processing_steps.html" %}
+
+            </div>
+
+        </section>
+
+        <!-- Результат -->
+
+        {% include "studies/partials/result.html" %}
+
+    </main>
+
+    <!-- Bootstrap -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript -->
+
+    <script
+        src="{% static 'studies/js/studies.js' %}">
+    </script>
+
+</body>
+
+</html>
